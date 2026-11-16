@@ -1,0 +1,139 @@
+
+.pokemon-card {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  background: linear-gradient(145deg, #18213a, #101729);
+  border: 1px solid #293858;
+  border-radius: 16px;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-7px);
+  border-color: #00e5ff;
+  box-shadow: 0 8px 30px #00e5ff20;
+}
+
+.pokemon-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemon-number {
+  color: #8290b1;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pokemon-origin {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: #00e5ff18;
+  color: #00e5ff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.pokemon-origin.db {
+  background: #a78bfa20;
+  color: #c4b5fd;
+}
+
+.pokemon-image-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 155px;
+}
+
+.pokemon-image-glow {
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background: #00e5ff;
+  opacity: 0.08;
+  filter: blur(25px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.pokemon-card:hover .pokemon-image-glow {
+  opacity: 0.2;
+  transform: scale(1.3);
+}
+
+.pokemon-image {
+  position: relative;
+  z-index: 1;
+  width: 145px;
+  height: 145px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 10px #0008);
+  transition: transform 0.3s;
+}
+
+.pokemon-card:hover .pokemon-image {
+  transform: scale(1.12);
+}
+
+.pokemon-card-info {
+  text-align: center;
+}
+
+.pokemon-card-info h3 {
+  margin-bottom: 12px;
+  color: #f1f5ff;
+  font-size: 19px;
+  text-transform: capitalize;
+}
+
+.pokemon-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7px;
+  min-height: 25px;
+}
+
+.pokemon-type {
+  padding: 5px 11px;
+  border-radius: 20px;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.pokemon-card-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ffffff12;
+}
+
+.pokemon-card-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.pokemon-card-stats span {
+  color: #7886a7;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.pokemon-card-stats strong {
+  color: #00e5ff;
+  font-size: 14px;
+}
+
+.pokemon-card {
+  cursor: pointer;
+}
